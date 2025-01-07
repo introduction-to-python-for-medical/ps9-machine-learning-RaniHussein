@@ -1,2 +1,2 @@
-path: "rani_PD.joblib
+path: "rani_PD.joblib"
 features: ['D2', 'PPE']
