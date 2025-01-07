@@ -16,7 +16,6 @@ knn.fit(X_scaled, y)
 from sklearn.metrics import accuracy_score
 y_pred = knn.predict(X_val)
 accuracy = accuracy_score(y_val, y_pred)
-print(accuracy)
 import joblib
 
 joblib.dump(knn, 'rani_Pd.joblib')
