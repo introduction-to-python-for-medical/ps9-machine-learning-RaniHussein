@@ -1,6 +1,5 @@
 import pandas as pd
 df = pd.read_csv('/content/parkinsons.csv')
-print(df.head(5))
 selected_features = ['D2', 'PPE']
 output_feature = 'status'
 from sklearn.neighbors import KNeighborsClassifier
