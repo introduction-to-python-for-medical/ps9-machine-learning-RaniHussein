@@ -9,6 +9,8 @@ selected_features = ['D2', 'PPE']
 output_feature = 'status'
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.impute import SimpleImputer
+imputer = simpleimputer(strategy = 'mean')
 X = df[selected_features]
 y = df[output_feature]
 scaler = MinMaxScaler()
