@@ -3,8 +3,6 @@
 
 # Download the data from your GitHub repository
 !wget https://raw.githubusercontent.com/yotam-biu/ps9/main/parkinsons.csv -O /content/parkinsons.csv
-
-
 import pandas as pd
 
 df = pd.read_csv('parkinsons.csv')
@@ -34,3 +32,12 @@ print(f"Accuracy: {accuracy}")
 
 if accuracy < 0.8:
     print("Warning: Accuracy is below the target of 0.8. Consider trying different features, models, or hyperparameters.")
+import joblib
+joblib.dump(model, 'parkinsons_model.joblib')
+print("Model saved as parkinsons_model.joblib")
+
+# Create the config.yaml file
+config = {
+    'selected_features': ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)'],
+    'path': 'parkinsons_model.joblib'
+}
