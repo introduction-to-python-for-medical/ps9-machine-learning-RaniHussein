@@ -34,6 +34,3 @@ print(f"Accuracy: {accuracy}")
 
 if accuracy < 0.8:
     print("Warning: Accuracy is below the target of 0.8. Consider trying different features, models, or hyperparameters.")
-import joblib
-joblib.dump(model, 'parkinsons_model.joblib')
-print("Model saved as parkinsons_model.joblib")
