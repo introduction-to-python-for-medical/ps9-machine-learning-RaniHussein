@@ -1,4 +1,9 @@
+%load_ext autoreload
+%autoreload 2
 
+# Download the data from your GitHub repository
+!wget https://raw.githubusercontent.com/yotam-biu/ps9/main/parkinsons.csv -O /content/parkinsons.csv
+     
 import pandas as pd
 
 df = pd.read_csv('parkinsons.csv')
@@ -23,5 +28,8 @@ accuracy = model.score(x_test, y_test)
 print(f"Accuracy: {accuracy}")
 
 if accuracy < 0.8:
-    print("Warning: Accuracy is below the target of 0.8. Consider trying different features, models, or hyperparameters.")
+   print("Warning: Accuracy is below the target of 0.8. Consider trying different features, models, or hyperparameters.")
 
+import joblib
+
+joblib.dump(model, 'parkinsons_model.joblib')
