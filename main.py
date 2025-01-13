@@ -3,7 +3,7 @@
 
 # Download the data from your GitHub repository
 !wget https://raw.githubusercontent.com/yotam-biu/ps9/main/parkinsons.csv -O /content/parkinsons.csv
-     
+#     
 import pandas as pd
 
 df = pd.read_csv('parkinsons.csv')
