@@ -1,3 +1,5 @@
 # Create the config.yaml file
-selected_features: ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)']  
-path: 'parkinsons_model.joblib'
+config = {
+    'features': ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)'],  # Change 'selected_features' to 'features'
+    'path': 'parkinsons_model.joblib'
+}
